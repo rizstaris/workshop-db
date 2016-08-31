@@ -1,0 +1,22 @@
+Manifest-Version: 1.0
+Bnd-LastModified: 1472633997241
+Build-Jdk: 1.7.0_21
+Built-By: RIZST
+Bundle-ManifestVersion: 2
+Bundle-Name: kai-ws
+Bundle-SymbolicName: com.kai.workshop.kai-ws
+Bundle-Version: 0.0.1.SNAPSHOT
+Created-By: Apache Maven Bundle Plugin
+Export-Package: com.kai.workshop.ws.schema;uses:="javax.xml.bind.annotat
+ ion";version="0.0.1.SNAPSHOT",com.kai.workshop.ws.service;uses:="com.ka
+ i.workshop.ws.schema,javax.jws";version="0.0.1.SNAPSHOT",com.kai.worksh
+ op.ws.processor;uses:="com.kai.workshop.ws.schema,org.apache.camel,com.
+ kai.workshop.dao.service,com.kai.workshop.model.workshop";version="0.0.
+ 1.SNAPSHOT"
+Import-Package: com.kai.workshop.dao.service;version="[0.0,1)",com.kai.w
+ orkshop.model.workshop;version="[0.0,1)",javax.jws,javax.xml.bind.annot
+ ation,oracle.jdbc;resolution:=optional,org.apache.camel;version="[2.15,
+ 3)",org.osgi.service.blueprint;version="[1.0.0,2.0.0)"
+Import-Service: com.kai.workshop.dao.service.WorkshopService;multiple:=f
+ alse
+Tool: Bnd-1.50.0

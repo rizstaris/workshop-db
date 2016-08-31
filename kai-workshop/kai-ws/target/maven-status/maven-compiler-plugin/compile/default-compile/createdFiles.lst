@@ -1,0 +1,5 @@
+com\kai\workshop\ws\schema\WorkshopSchema.class
+com\kai\workshop\ws\schema\Response.class
+com\kai\workshop\ws\service\WorkshopWS.class
+com\kai\workshop\ws\processor\WorkshopWSProcessor.class
+com\kai\workshop\ws\schema\Request.class

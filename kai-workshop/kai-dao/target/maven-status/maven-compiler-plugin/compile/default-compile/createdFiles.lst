@@ -1,0 +1,5 @@
+com\kai\workshop\dao\service\WorkshopService.class
+com\kai\workshop\dao\mapper\WorkshopMapper$2.class
+com\kai\workshop\dao\mapper\WorkshopMapper$1.class
+com\kai\workshop\dao\mapper\WorkshopMapper.class
+com\kai\workshop\dao\impl\WorkshopDAO.class

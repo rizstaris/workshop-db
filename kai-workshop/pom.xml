@@ -1,0 +1,100 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>com.kai.workshop</groupId>
+  <artifactId>kai-workshop</artifactId>
+  <version>0.0.1-SNAPSHOT</version>
+  <packaging>pom</packaging>
+  <name>kai-workshop</name>
+  
+  <properties>
+		<maven.compiler.target>1.7</maven.compiler.target>
+		<maven.compiler.source>1.7</maven.compiler.source>
+		<maven.compiler.plugin.version>3.1</maven.compiler.plugin.version>
+		<maven-resources-plugin.version>2.4.3</maven-resources-plugin.version>
+		<org.apache.commons.dbcp2.version>2.1.1</org.apache.commons.dbcp2.version>
+		<org.apache.commons.pool2.version>2.4.2</org.apache.commons.pool2.version>
+		<mysql-connector-java.version>5.1.34</mysql-connector-java.version>
+		<com.oracle.ojdbc6.version>11.2.0.3</com.oracle.ojdbc6.version>
+		<jboss.fuse.bom.version>6.2.0.redhat-133</jboss.fuse.bom.version>
+		<fabric8.profile>quickstarts-cxf-camel.cxf.code.first</fabric8.profile>
+		<version.maven-bundle-plugin>2.3.7</version.maven-bundle-plugin>
+		<fabric8.parentProfiles>feature-camel feature-cxf</fabric8.parentProfiles>
+		<fabric.version>1.2.0-SNAPSHOT</fabric.version>
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+		<version.maven-surefire-plugin>2.15</version.maven-surefire-plugin>
+		<skipTests>true</skipTests>
+		<fabric8.features>camel-cxf camel-blueprint</fabric8.features>
+		<jaxb2-maven-plugin.version>1.6</jaxb2-maven-plugin.version>
+		<org.apache.cxf.codegen.version>3.0.4.redhat-620133</org.apache.cxf.codegen.version>
+		<org.apache.cxf.cxf-xjc-plugin.version>3.0.4.redhat-620133</org.apache.cxf.cxf-xjc-plugin.version>
+	</properties>
+
+	<dependencyManagement>
+		<dependencies>
+			<dependency>
+				<groupId>org.jboss.fuse.bom</groupId>
+				<artifactId>jboss-fuse-parent</artifactId>
+				<version>${jboss.fuse.bom.version}</version>
+				<type>pom</type>
+				<scope>import</scope>
+			</dependency>
+			<dependency>
+				<groupId>org.ow2.asm</groupId>
+				<artifactId>asm-all</artifactId>
+				<version>4.0</version>
+				<scope>test</scope>
+			</dependency>
+		</dependencies>
+	</dependencyManagement>
+
+	<dependencies>
+		<dependency>
+			<groupId>org.slf4j</groupId>
+			<artifactId>slf4j-api</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>org.slf4j</groupId>
+			<artifactId>slf4j-log4j12</artifactId>
+		</dependency>
+
+		<dependency>
+			<groupId>org.ops4j.base</groupId>
+			<artifactId>ops4j-base-io</artifactId>
+			<scope>test</scope>
+		</dependency>
+		<dependency>
+			<groupId>org.ops4j.base</groupId>
+			<artifactId>ops4j-base-lang</artifactId>
+			<scope>test</scope>
+		</dependency>
+		<dependency>
+			<groupId>org.ops4j.base</groupId>
+			<artifactId>ops4j-base-store</artifactId>
+			<scope>test</scope>
+		</dependency>
+		<dependency>
+			<groupId>org.ops4j.pax.swissbox</groupId>
+			<artifactId>pax-swissbox-bnd</artifactId>
+			<scope>test</scope>
+		</dependency>
+		<dependency>
+			<groupId>org.osgi</groupId>
+			<artifactId>org.osgi.compendium</artifactId>
+			<scope>test</scope>
+		</dependency>
+		<dependency>
+			<groupId>junit</groupId>
+			<artifactId>junit</artifactId>
+			<scope>test</scope>
+		</dependency>
+
+	</dependencies>
+
+	<modules>
+		<module>kai-ds</module>
+		<module>kai-model</module>
+		<module>kai-dao</module>
+		<module>kai-ws</module>
+	</modules>
+  
+</project>
